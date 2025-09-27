@@ -1,0 +1,74 @@
+---
+// src/components/AnimateOnScroll.astro
+// Defines the wrapper component that handles the animation logic.
+
+const { animation = 'fade-up', delay = 0 } = Astro.props;
+
+// Use Astro's client:load directive to ensure the script runs immediately
+// and the Intersection Observer begins monitoring the element.
+---
+<div
+    class={`scroll-animate opacity-0 transition-all duration-700 transform ${animation}`}
+    data-delay={delay}
+>
+    <slot />
+</div>
+
+<script>
+    // Pure JavaScript for the Intersection Observer
+    document.addEventListener('DOMContentLoaded', () => {
+        // Find all elements that use the wrapper class
+        const animatedElements = document.querySelectorAll('.scroll-animate');
+
+        const observerOptions = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.1, // 10% of element must be visible to trigger
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const element = entry.target;
+                    const delay = element.dataset.delay || 0;
+
+                    setTimeout(() => {
+                        // 1. Set opacity to 1
+                        element.classList.remove('opacity-0');
+                        // 2. Remove the initial transform state (which causes the movement)
+                        element.classList.remove('fade-up', 'fade-right', 'zoom-in');
+                        
+                        // Stop observing after the animation runs once
+                        observer.unobserve(element);
+                    }, delay);
+                }
+            });
+        }, observerOptions);
+
+        animatedElements.forEach(element => {
+            observer.observe(element);
+        });
+    });
+</script>
+
+<style>
+/* Define the initial hidden states for various effects */
+
+/* Default: Fade Up */
+.scroll-animate.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Fade Right */
+.scroll-animate.fade-right {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+/* Zoom In */
+.scroll-animate.zoom-in {
+    opacity: 0;
+    transform: scale(0.9);
+}
+</style>

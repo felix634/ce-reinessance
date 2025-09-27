@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AnimateOnScroll from '../components/AnimateOnScroll.astro'; // NEW IMPORT
 
 const services = [
     {
@@ -37,34 +38,38 @@ const services = [
 
     <div class="grid lg:grid-cols-2 gap-8">
         {services.map((service, index) => (
-            <div 
-                class="bg-primary-dark p-8 rounded-xl shadow-2xl border-t-4 border-accent-gold flex flex-col justify-between transition duration-500 hover:shadow-3xl hover:bg-[#252525]"
-            >
-                <div>
-                    <h2 class="text-3xl font-bold mb-2 text-white">{service.title}</h2>
-                    <p class="text-gray-300 mb-4">{service.description}</p>
-                    <ul class="list-disc list-inside text-gray-400 mb-6 space-y-1 ml-4">
-                        {service.details.map((detail) => (
-                            <li>{detail}</li>
-                        ))}
-                    </ul>
+            <AnimateOnScroll animation={index % 2 === 0 ? "fade-right" : "fade-left"}>
+                <div 
+                    class="bg-primary-dark p-8 rounded-xl shadow-2xl border-t-4 border-accent-gold flex flex-col justify-between transition duration-500 hover:shadow-3xl hover:bg-[#252525]"
+                >
+                    <div>
+                        <h2 class="text-3xl font-bold mb-2 text-white">{service.title}</h2>
+                        <p class="text-gray-300 mb-4">{service.description}</p>
+                        <ul class="list-disc list-inside text-gray-400 mb-6 space-y-1 ml-4">
+                            {service.details.map((detail) => (
+                                <li>{detail}</li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-gray-700">
+                        <p class="text-2xl font-semibold text-accent-gold">{service.price}</p>
+                        <a 
+                            href="/contact" 
+                            class="mt-3 inline-block text-sm font-medium text-white border border-white px-4 py-2 rounded-full hover:bg-accent-gold hover:border-accent-gold transition duration-300"
+                        >
+                            Request Consultation
+                        </a>
+                    </div>
                 </div>
-                <div class="pt-4 border-t border-gray-700">
-                    <p class="text-2xl font-semibold text-accent-gold">{service.price}</p>
-                    <a 
-                        href="/contact" 
-                        class="mt-3 inline-block text-sm font-medium text-white border border-white px-4 py-2 rounded-full hover:bg-accent-gold hover:border-accent-gold transition duration-300"
-                    >
-                        Request Consultation
-                    </a>
-                </div>
-            </div>
+            </AnimateOnScroll>
         ))}
     </div>
     
-    <div class="mt-16 text-center bg-gray-900 p-8 rounded-lg">
-        <p class="text-lg text-gray-300">
-            *All prices are estimates and vary based on the complexity, scale, and location of the project.
-        </p>
-    </div>
+    <AnimateOnScroll animation="fade-up">
+        <div class="mt-16 text-center bg-gray-900 p-8 rounded-lg">
+            <p class="text-lg text-gray-300">
+                *All prices are estimates and vary based on the complexity, scale, and location of the project.
+            </p>
+        </div>
+    </AnimateOnScroll>
 </Layout>
