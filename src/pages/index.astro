@@ -1,10 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import LogoScroller from '../components/LogoScroller.astro'; 
+// LogoScroller import is removed
 ---
 
 <Layout title="Luxury Home & Heritage Renovation in Central Europe">
-    <section class="relative h-[80vh] min-h-[500px] mb-16">
+    <section class="relative h-[80vh] min-h-[500px] mb-20">
         <div class="absolute inset-0">
             <img 
                 src="/assets/images/hero.png" 
@@ -32,9 +32,7 @@ import LogoScroller from '../components/LogoScroller.astro';
         </div>
     </section>
 
-    <LogoScroller />
-
-    <section class="grid md:grid-cols-3 gap-8 my-16">
+    <section class="grid md:grid-cols-3 gap-8 mb-16">
         <div class="p-6 bg-primary-dark rounded-lg shadow-xl border-t-4 border-accent-gold transition duration-500 hover:shadow-2xl hover:bg-[#252525]">
             <h2 class="text-2xl font-bold mb-3">Heritage Restoration</h2>
             <p class="text-gray-300">Preserving the past with precision, using authentic materials and expert craftsmanship.</p>
