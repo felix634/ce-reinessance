@@ -31,11 +31,22 @@ const { title } = Astro.props;
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         
         <script is:inline>
+            // Initialize AOS with safer settings
             AOS.init({
                 duration: 800,
                 once: true,
                 easing: 'ease-out',
+                // CRITICAL FIX: Disable AOS entirely on mobile devices 
+                // to prevent rendering conflicts on smaller screens (this is a common fix)
+                disable: 'mobile', 
+                // Add an offset so the animation is triggered a bit earlier
+                offset: 100,
             });
+            
+            // CRITICAL FIX: Force AOS to recalculate elements after initialization
+            // This is essential in Astro environments
+            window.addEventListener('load', AOS.refresh);
+            window.addEventListener('resize', AOS.refresh);
         </script>
 	</body>
 </html>
