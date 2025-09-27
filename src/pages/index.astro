@@ -42,4 +42,127 @@ import AnimateOnScroll from '../components/AnimateOnScroll.astro';
                 <h2 class="text-2xl font-bold mb-3">Luxury Modernization</h2>
                 <p class="text-gray-300">Integrating cutting-edge technology and design into historic structures.</p>
             </div>
-            <div class="p-6 bg-primary-dark rounded-lg shadow-xl border-t-4
+            <div class="p-6 bg-primary-dark rounded-lg shadow-xl border-t-4 border-accent-gold transition duration-500 hover:shadow-2xl hover:bg-[#252525]">
+                <h2 class="text-2xl font-bold mb-3">Central European Focus</h2>
+                <p class="text-gray-300">Operating in Hungary, Austria, Czechia, and Poland with local expertise.</p>
+            </div>
+        </section>
+    </AnimateOnScroll>
+    
+    <AnimateOnScroll animation="fade-right">
+        <section class="mb-20 py-16 bg-primary-dark rounded-xl shadow-2xl">
+            <div class="grid md:grid-cols-2 gap-10 items-center px-8">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4 text-white">Uncompromising Quality, Unmatched Heritage Expertise</h2>
+                    <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                        Our commitment goes beyond standard renovation. We specialize in navigating the complex regulatory landscapes of Central European heritage properties, ensuring every detail—from custom millwork to material sourcing—adheres to both historical authenticity and modern luxury standards.
+                    </p>
+                    <a href="/about" class="text-accent-gold hover:text-white transition duration-300 font-semibold border-b border-accent-gold hover:border-white">
+                        Meet Our Masters &rarr;
+                    </a>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <span class="text-accent-gold text-2xl mr-3 mt-1">✓</span>
+                        <p class="text-gray-300"><strong class="text-white">Local Expertise:</strong> Deep knowledge of Hungarian, Austrian, Czech, and Polish construction standards.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-accent-gold text-2xl mr-3 mt-1">✓</span>
+                        <p class="text-gray-300"><strong class="text-white">Authentic Materials:</strong> Direct sourcing of specialty materials for true historical integrity.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-accent-gold text-2xl mr-3 mt-1">✓</span>
+                        <p class="text-gray-300"><strong class="text-white">Future-Proof Integration:</strong> Seamless installation of smart technology and sustainable systems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </AnimateOnScroll>
+
+    <section class="mb-20 py-16">
+        <AnimateOnScroll animation="fade-up">
+            <h2 class="text-4xl font-bold text-center mb-12">Our 4-Step <span class="text-white">Renaissance Process</span></h2>
+        </AnimateOnScroll>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <AnimateOnScroll animation="fade-up" delay={100}><div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03]">
+                <p class="text-accent-gold text-4xl mb-3">01</p>
+                <h3 class="text-xl font-bold mb-2 text-white">Consultation & Scope</h3>
+                <p class="text-gray-400">Defining your vision, detailed assessment of the property, and establishing the foundational budget.</p>
+            </div></AnimateOnScroll>
+            <AnimateOnScroll animation="fade-up" delay={200}><div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03]">
+                <p class="text-accent-gold text-4xl mb-3">02</p>
+                <h3 class="text-xl font-bold mb-2 text-white">Design & Heritage Review</h3>
+                <p class="text-gray-400">Architectural planning, compliance with preservation laws, and final material selection.</p>
+            </div></AnimateOnScroll>
+            <AnimateOnScroll animation="fade-up" delay={300}><div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03]">
+                <p class="text-accent-gold text-4xl mb-3">03</p>
+                <h3 class="text-xl font-bold mb-2 text-white">Execution & Craftsmanship</h3>
+                <p class="text-gray-400">On-site renovation management, quality control, and integration of modern systems.</p>
+            </div></AnimateOnScroll>
+            <AnimateOnScroll animation="fade-up" delay={400}><div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03]">
+                <p class="text-accent-gold text-4xl mb-3">04</p>
+                <h3 class="text-xl font-bold mb-2 text-white">Handover & Guarantee</h3>
+                <p class="text-gray-400">Final client walkthrough, project handover, and comprehensive quality assurance guarantee.</p>
+            </div></AnimateOnScroll>
+        </div>
+    </section>
+
+    <section class="py-16">
+        <h2 class="text-3xl font-bold mb-10 text-center">Voices of <span class="text-white">Our Clients</span></h2>
+        
+        <div class="flex overflow-x-auto snap-x snap-mandatory space-x-6 pb-4">
+            <AnimateOnScroll animation="zoom-in" delay={100}>
+                <blockquote class="snap-center flex-shrink-0 w-[90vw] md:w-[700px] max-w-4xl mx-auto italic text-center p-8 bg-primary-dark rounded-xl shadow-lg">
+                    <span class="text-accent-gold text-5xl font-serif leading-none mr-2">"</span>
+                    <p class="text-xl font-light leading-snug inline-block text-gray-200">
+                        CE Reinessance took our historic Budapest apartment and achieved the impossible: preserving its 19th-century soul while making it a modern masterpiece. The craftsmanship is truly exceptional.
+                    </p>
+                    <span class="text-accent-gold text-5xl font-serif leading-none ml-2">"</span>
+                    <footer class="mt-4">
+                        <cite class="text-accent-gold text-md font-semibold block not-italic">— Dr. and Mrs. Kovács, Investor Clients in Budapest</cite>
+                    </footer>
+                </blockquote>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll animation="zoom-in" delay={300}>
+                <blockquote class="snap-center flex-shrink-0 w-[90vw] md:w-[700px] max-w-4xl mx-auto italic text-center p-8 bg-primary-dark rounded-xl shadow-lg">
+                    <span class="text-accent-gold text-5xl font-serif leading-none mr-2">"</span>
+                    <p class="text-xl font-light leading-snug inline-block text-gray-200">
+                        Their respect for the Viennese architectural heritage combined with their modern project management made our extensive villa renovation completely stress-free. Highly recommended.
+                    </p>
+                    <span class="text-accent-gold text-5xl font-serif leading-none ml-2">"</span>
+                    <footer class="mt-4">
+                        <cite class="text-accent-gold text-md font-semibold block not-italic">— Herr Anton Mayer, Private Client in Vienna</cite>
+                    </footer>
+                </blockquote>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll animation="zoom-in" delay={500}>
+                <blockquote class="snap-center flex-shrink-0 w-[90vw] md:w-[700px] max-w-4xl mx-auto italic text-center p-8 bg-primary-dark rounded-xl shadow-lg">
+                    <span class="text-accent-gold text-5xl font-serif leading-none mr-2">"</span>
+                    <p class="text-xl font-light leading-snug inline-block text-gray-200">
+                        From initial concept to final handover, the process transparency was exemplary. They handled all permitting for our Prague Old Town apartment flawlessly. A true 'renaissance' team.
+                    </p>
+                    <span class="text-accent-gold text-5xl font-serif leading-none ml-2">"</span>
+                    <footer class="mt-4">
+                        <cite class="text-accent-gold text-md font-semibold block not-italic">— Mrs. Lenka Novak, Commercial Property Owner in Prague</cite>
+                    </footer>
+                </blockquote>
+            </AnimateOnScroll>
+        </div>
+    </section>
+
+    <AnimateOnScroll animation="fade-up">
+        <section class="bg-primary-dark p-10 rounded-lg shadow-2xl text-center">
+            <h2 class="text-4xl font-bold mb-4">See Our Latest Work</h2>
+            <p class="text-lg text-text-light mb-6">View our portfolio of successful projects in Budapest, Vienna, and Prague.</p>
+            <a 
+                href="/references" 
+                class="px-6 py-3 text-base font-semibold text-accent-gold border-2 border-accent-gold rounded-full hover:bg-accent-gold hover:text-background-dark transition duration-500"
+            >
+                View References
+            </a>
+        </section>
+    </AnimateOnScroll>
+</Layout>
