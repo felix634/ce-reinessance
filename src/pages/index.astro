@@ -1,39 +1,92 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import AnimateOnScroll from '../components/AnimateOnScroll.astro'; // NEW IMPORT
+import AnimateOnScroll from '../components/AnimateOnScroll.astro'; 
 ---
 
 <Layout title="Luxury Home & Heritage Renovation in Central Europe">
-    <AnimateOnScroll animation="fade-up">
-        <section class="grid md:grid-cols-3 gap-8 mb-20">
-            </section>
-    </AnimateOnScroll>
-    
-    <AnimateOnScroll animation="fade-right">
-        <section class="mb-20 py-16 bg-primary-dark rounded-xl shadow-2xl">
-            </section>
-    </AnimateOnScroll>
+    <section class="relative h-[80vh] min-h-[500px] mb-20">
+        <div class="absolute inset-0">
+            <img 
+                src="/assets/images/hero.png" 
+                alt="Modern luxury living room interior" 
+                class="w-full h-full object-cover" 
+                loading="eager"
+            />
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
 
-    <AnimateOnScroll animation="zoom-in">
-        <section class="py-16 text-center">
-            </section>
-    </AnimateOnScroll>
-
-    <section class="mb-20 py-16">
-        <AnimateOnScroll animation="fade-up">
-            <h2 class="text-4xl font-bold text-center mb-12">Our 4-Step <span class="text-white">Renaissance Process</span></h2>
-        </AnimateOnScroll>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <AnimateOnScroll animation="fade-up" delay={100}><div class="p-6 bg-primary-dark ...">...</div></AnimateOnScroll>
-            <AnimateOnScroll animation="fade-up" delay={200}><div class="p-6 bg-primary-dark ...">...</div></AnimateOnScroll>
-            <AnimateOnScroll animation="fade-up" delay={300}><div class="p-6 bg-primary-dark ...">...</div></AnimateOnScroll>
-            <AnimateOnScroll animation="fade-up" delay={400}><div class="p-6 bg-primary-dark ...">...</div></AnimateOnScroll>
+        <div class="relative z-10 flex flex-col justify-center items-center h-full text-center p-4">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-4 leading-tight text-white drop-shadow-lg tracking-wider">
+                <span class="text-accent-gold block mb-2">CE Reinessance</span>
+                Architectural Restoration
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-text-light max-w-3xl mb-8 drop-shadow-md">
+                Masterful renovation and preservation of heritage and luxury properties across Central Europe.
+            </p>
+            <a 
+                href="/contact" 
+                class="px-8 py-3 text-lg font-semibold text-background-dark bg-accent-gold rounded-full shadow-lg hover:bg-white hover:text-accent-gold transition duration-500 transform hover:scale-105"
+            >
+                Start Your Project
+            </a>
         </div>
     </section>
 
     <AnimateOnScroll animation="fade-up">
-        <section class="bg-primary-dark p-10 rounded-lg shadow-2xl text-center">
-            </section>
+        <section class="grid md:grid-cols-3 gap-8 mb-20">
+            <div class="p-6 bg-primary-dark rounded-lg shadow-xl border-t-4 border-accent-gold transition duration-500 hover:shadow-2xl hover:bg-[#252525]">
+                <h2 class="text-2xl font-bold mb-3">Heritage Restoration</h2>
+                <p class="text-gray-300">Preserving the past with precision, using authentic materials and expert craftsmanship.</p>
+            </div>
+            <div class="p-6 bg-primary-dark rounded-lg shadow-xl border-t-4 border-accent-gold transition duration-500 hover:shadow-2xl hover:bg-[#252525]">
+                <h2 class="text-2xl font-bold mb-3">Luxury Modernization</h2>
+                <p class="text-gray-300">Integrating cutting-edge technology and design into historic structures.</p>
+            </div>
+            <div class="p-6 bg-primary-dark rounded-lg shadow-xl border-t-4 border-accent-gold transition duration-500 hover:shadow-2xl hover:bg-[#252525]">
+                <h2 class="text-2xl font-bold mb-3">Central European Focus</h2>
+                <p class="text-gray-300">Operating in Hungary, Austria, Czechia, and Poland with local expertise.</p>
+            </div>
+        </section>
     </AnimateOnScroll>
-</Layout>
+    
+    <AnimateOnScroll animation="fade-right">
+        <section class="mb-20 py-16 bg-primary-dark rounded-xl shadow-2xl">
+            <div class="grid md:grid-cols-2 gap-10 items-center px-8">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4 text-white">Uncompromising Quality, Unmatched Heritage Expertise</h2>
+                    <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                        Our commitment goes beyond standard renovation. We specialize in navigating the complex regulatory landscapes of Central European heritage properties, ensuring every detail—from custom millwork to material sourcing—adheres to both historical authenticity and modern luxury standards.
+                    </p>
+                    <a href="/about" class="text-accent-gold hover:text-white transition duration-300 font-semibold border-b border-accent-gold hover:border-white">
+                        Meet Our Masters &rarr;
+                    </a>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <span class="text-accent-gold text-2xl mr-3 mt-1">✓</span>
+                        <p class="text-gray-300"><strong class="text-white">Local Expertise:</strong> Deep knowledge of Hungarian, Austrian, Czech, and Polish construction standards.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-accent-gold text-2xl mr-3 mt-1">✓</span>
+                        <p class="text-gray-300"><strong class="text-white">Authentic Materials:</strong> Direct sourcing of specialty materials for true historical integrity.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-accent-gold text-2xl mr-3 mt-1">✓</span>
+                        <p class="text-gray-300"><strong class="text-white">Future-Proof Integration:</strong> Seamless installation of smart technology and sustainable systems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </AnimateOnScroll>
+
+    <AnimateOnScroll animation="zoom-in">
+        <section class="py-16 text-center">
+            <h2 class="text-3xl font-bold mb-10">Voices of <span class="text-white">Our Clients</span></h2>
+            <blockquote class="max-w-4xl mx-auto italic text-gray-200">
+                <span class="text-accent-gold text-5xl font-serif leading-none mr-2">"</span>
+                <p class="text-2xl md:text-3xl font-light leading-snug inline-block">
+                    CE Reinessance took our historic Budapest apartment and achieved the impossible: preserving its 19th-century soul while making it a modern masterpiece. The craftsmanship is truly exceptional.
+                </p>
+                <span class="text-accent-gold text-5xl font-serif leading-none ml-2">"</span>
+                <footer class="mt-6">
+                    <cite class="text-accent-gold text-lg font-semibold block not-italic">— Dr. and Mrs. Kovács, Investor
