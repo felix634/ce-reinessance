@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About CE Reinessance - Our Story and Mission">
+    <h1 class="text-4xl font-bold mb-8 text-center">About <span class="text-white">CE Reinessance</span></h1>
+
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div class="order-2 md:order-1">
+            <h2 class="text-3xl font-semibold mb-4 text-white">Our Mission: Reviving Central European Splendor</h2>
+            <p class="text-gray-300 mb-4 text-lg leading-relaxed">
+                Founded in Budapest, **CE Reinessance** was established with a clear vision: to bring the region's historic architectural treasures into the modern era without sacrificing their inherent character. We specialize in complex, high-end renovations of residential and commercial properties.
+            </p>
+            <p class="text-gray-400 leading-relaxed">
+                Our team comprises master craftsmen, preservation architects, and modern interior designers. We approach every project—from the grandeur of a Viennese palace to the elegance of an old town Prague apartment—with the utmost respect for history and an eye for future-proof luxury. Our operations are centered in Hungary, providing seamless service across key Central European cities.
+            </p>
+        </div>
+        <div class="order-1 md:order-2 shadow-2xl rounded-lg overflow-hidden transform hover:scale-[1.02] transition duration-500">
+            <img 
+                src="/assets/images/about.png" 
+                alt="CE Reinessance team outside a renovated building" 
+                class="w-full h-auto object-cover" 
+                loading="lazy"
+            />
+        </div>
+    </div>
+
+    <section class="bg-primary-dark p-10 rounded-lg shadow-xl">
+        <h2 class="text-3xl font-bold text-center mb-8 text-white">Core Values</h2>
+        <div class="grid sm:grid-cols-3 gap-8 text-center">
+            <div class="p-4">
+                <p class="text-accent-gold text-5xl mb-3">🛠️</p>
+                <h3 class="text-xl font-semibold mb-2 text-white">Craftsmanship</h3>
+                <p class="text-gray-400">Uncompromising quality and attention to historical detail.</p>
+            </div>
+            <div class="p-4">
+                <p class="text-accent-gold text-5xl mb-3">🌍</p>
+                <h3 class="text-xl font-semibold mb-2 text-white">Integrity</h3>
+                <p class="text-gray-400">Transparent processes and honest client relationships.</p>
+            </div>
+            <div class="p-4">
+                <p class="text-accent-gold text-5xl mb-3">✨</p>
+                <h3 class="text-xl font-semibold mb-2 text-white">Innovation</h3>
+                <p class="text-gray-400">Applying modern sustainable techniques to age-old structures.</p>
+            </div>
+        </div>
+    </section>
+</Layout>

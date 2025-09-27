@@ -1,11 +1,59 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Luxury Home & Heritage Renovation in Central Europe">
+    <section class="relative h-[80vh] min-h-[500px] mb-16">
+        <div class="absolute inset-0">
+            <img 
+                src="/assets/images/hero.png" 
+                alt="Modern luxury living room interior" 
+                class="w-full h-full object-cover" 
+                loading="eager"
+            />
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        <div class="relative z-10 flex flex-col justify-center items-center h-full text-center p-4">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight text-white drop-shadow-lg tracking-wider">
+                <span class="text-accent-gold block mb-2">CE Reinessance</span>
+                Architectural Restoration
+            </h1>
+            <p class="text-xl md:text-2xl text-text-light max-w-3xl mb-8 drop-shadow-md">
+                Masterful renovation and preservation of heritage and luxury properties across Central Europe.
+            </p>
+            <a 
+                href="/contact" 
+                class="px-8 py-3 text-lg font-semibold text-background-dark bg-accent-gold rounded-full shadow-lg hover:bg-white hover:text-accent-gold transition duration-500 transform hover:scale-105"
+            >
+                Start Your Project
+            </a>
+        </div>
+    </section>
+
+    <section class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="p-6 bg-primary-dark rounded-lg shadow-xl border-t-4 border-accent-gold transition duration-500 hover:shadow-2xl hover:bg-[#252525]">
+            <h2 class="text-2xl font-bold mb-3">Heritage Restoration</h2>
+            <p class="text-gray-300">Preserving the past with precision, using authentic materials and expert craftsmanship.</p>
+        </div>
+        <div class="p-6 bg-primary-dark rounded-lg shadow-xl border-t-4 border-accent-gold transition duration-500 hover:shadow-2xl hover:bg-[#252525]">
+            <h2 class="text-2xl font-bold mb-3">Luxury Modernization</h2>
+            <p class="text-gray-300">Integrating cutting-edge technology and design into historic structures.</p>
+        </div>
+        <div class="p-6 bg-primary-dark rounded-lg shadow-xl border-t-4 border-accent-gold transition duration-500 hover:shadow-2xl hover:bg-[#252525]">
+            <h2 class="text-2xl font-bold mb-3">Central European Focus</h2>
+            <p class="text-gray-300">Operating in Hungary, Austria, Czechia, and Poland with local expertise.</p>
+        </div>
+    </section>
+
+    <section class="bg-primary-dark p-10 rounded-lg shadow-2xl text-center">
+        <h2 class="text-4xl font-bold mb-4">See Our Latest Work</h2>
+        <p class="text-lg text-text-light mb-6">View our portfolio of successful projects in Budapest, Vienna, and Prague.</p>
+        <a 
+            href="/references" 
+            class="px-6 py-3 text-base font-semibold text-accent-gold border-2 border-accent-gold rounded-full hover:bg-accent-gold hover:text-background-dark transition duration-500"
+        >
+            View References
+        </a>
+    </section>
 </Layout>

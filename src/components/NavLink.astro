@@ -1,0 +1,22 @@
+---
+interface Props {
+    href: string;
+    text: string;
+}
+
+const { href, text } = Astro.props;
+const currentPath = Astro.url.pathname.replace(/\/$/, ''); // Remove trailing slash
+const isActive = currentPath === href.replace(/\/$/, '');
+---
+<a
+    href={href}
+    class:list={[
+        "text-lg font-medium tracking-wide transition duration-300 ease-in-out",
+        isActive
+            ? "text-accent-gold border-b-2 border-accent-gold"
+            : "text-text-light hover:text-accent-gold hover:border-b-2 hover:border-accent-gold/50",
+    ]}
+    aria-current={isActive ? "page" : false}
+>
+    {text}
+</a>

@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const services = [
+    {
+        title: 'Full Heritage Restoration',
+        description: 'Detailed, historically accurate restoration of facades, interiors, and structural elements of classified buildings. Includes coordination with national heritage bodies.',
+        details: ['Facade Restoration', 'Authentic Material Sourcing', 'Structural Preservation'],
+        price: 'Project-Based Quote',
+    },
+    {
+        title: 'Luxury Interior Modernization',
+        description: 'Complete overhaul of interior spaces, integrating high-end finishes, smart home technology, and bespoke joinery into historic shells.',
+        details: ['Smart Home Integration', 'Bespoke Kitchens & Bathrooms', 'Interior Design Consulting'],
+        price: 'Starting at €2,500/sqm',
+    },
+    {
+        title: 'Architectural Project Management',
+        description: 'End-to-end management of complex renovation projects, overseeing all contractors, timelines, budgets, and quality control.',
+        details: ['Permitting & Compliance', 'Budget Management', 'Contractor Supervision'],
+        price: '15% of Project Value',
+    },
+    {
+        title: 'Pre-Purchase Property Assessment',
+        description: 'Detailed technical assessment of a property\'s condition and feasibility study for potential renovation before purchase.',
+        details: ['Structural Review', 'Cost Estimation', 'Renovation Feasibility Report'],
+        price: 'Fixed Fee: €1,500',
+    },
+];
+---
+
+<Layout title="Prices and Services for Renovation and Restoration">
+    <h1 class="text-4xl font-bold mb-4 text-center">Prices & <span class="text-white">Services</span></h1>
+    <p class="text-xl text-gray-400 text-center mb-12 max-w-3xl mx-auto">
+        We offer a modular range of services tailored to the specific needs of high-value properties in Central Europe. Contact us for a precise, detailed quotation.
+    </p>
+
+    <div class="grid lg:grid-cols-2 gap-8">
+        {services.map((service) => (
+            <div class="bg-primary-dark p-8 rounded-xl shadow-2xl border-t-4 border-accent-gold flex flex-col justify-between transition duration-500 hover:shadow-3xl hover:bg-[#252525]">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2 text-white">{service.title}</h2>
+                    <p class="text-gray-300 mb-4">{service.description}</p>
+                    <ul class="list-disc list-inside text-gray-400 mb-6 space-y-1 ml-4">
+                        {service.details.map((detail) => (
+                            <li>{detail}</li>
+                        ))}
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-gray-700">
+                    <p class="text-2xl font-semibold text-accent-gold">{service.price}</p>
+                    <a 
+                        href="/contact" 
+                        class="mt-3 inline-block text-sm font-medium text-white border border-white px-4 py-2 rounded-full hover:bg-accent-gold hover:border-accent-gold transition duration-300"
+                    >
+                        Request Consultation
+                    </a>
+                </div>
+            </div>
+        ))}
+    </div>
+    
+    <div class="mt-16 text-center bg-gray-900 p-8 rounded-lg">
+        <p class="text-lg text-gray-300">
+            *All prices are estimates and vary based on the complexity, scale, and location of the project.
+        </p>
+    </div>
+</Layout>

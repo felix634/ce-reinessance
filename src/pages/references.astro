@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const projects = [
+    { title: 'The Ambassador\'s Residence', location: 'Budapest, Hungary', image: '/assets/images/budapest.png', description: 'Complete heritage facade and interior restoration of a 19th-century apartment building.' },
+    { title: 'Modern Penthouse Conversion', location: 'Prague, Czechia', image: '/assets/images/prague.png', description: 'Conversion of an historic attic into a high-tech luxury penthouse apartment.' },
+    { title: 'Classic City Townhouse', location: 'Vienna, Austria', image: '/assets/images/vienna.png', description: 'Full modernization of a Biedermeier-era townhouse while preserving original mouldings and floors.' },
+    { title: 'The Garden Estate', location: 'Warsaw, Poland', image: '/assets/images/warsaw.png', description: 'Comprehensive renovation of a suburban family estate, including extensive landscaping and structural upgrades.' },
+];
+---
+
+<Layout title="Our Renovation Portfolio & Reference Work">
+    <h1 class="text-4xl font-bold mb-4 text-center">References: <span class="text-white">Our Signature Projects</span></h1>
+    <p class="text-xl text-gray-400 text-center mb-12 max-w-3xl mx-auto">
+        A selection of our finest work, demonstrating our capability in both historic preservation and contemporary luxury modernization across Central Europe.
+    </p>
+
+    <div class="grid lg:grid-cols-2 gap-12">
+        {projects.map((project) => (
+            <div class="bg-primary-dark rounded-xl shadow-2xl overflow-hidden group">
+                <div class="h-64 overflow-hidden">
+                    <img 
+                        src={project.image} 
+                        alt={`Project photo from ${project.location}`} 
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-in-out" 
+                        loading="lazy"
+                    />
+                </div>
+                <div class="p-6">
+                    <h2 class="text-3xl font-bold mb-1 text-white">{project.title}</h2>
+                    <p class="text-accent-gold text-lg mb-3 font-medium">{project.location}</p>
+                    <p class="text-gray-300 mb-4">{project.description}</p>
+                    <a href="/contact" class="text-sm text-accent-gold hover:text-white transition duration-300 border-b border-accent-gold hover:border-white">
+                        Inquire about similar projects &rarr;
+                    </a>
+                </div>
+            </div>
+        ))}
+    </div>
+</Layout>

@@ -1,0 +1,18 @@
+---
+const currentYear = new Date().getFullYear();
+---
+<footer class="mt-20 border-t border-primary-dark bg-primary-dark p-8 shadow-inner">
+    <div class="max-w-7xl mx-auto text-center text-sm text-gray-400">
+        <p class="mb-2">
+            CE Reinessance | Central European Renovation Specialists | Hungary-based Operations.
+        </p>
+        <p>
+            &copy; {currentYear} All rights reserved. | Built with Astro.
+        </p>
+        <div class="mt-4 flex justify-center space-x-6">
+            <a href="/contact" class="hover:text-accent-gold transition duration-300">Contact</a>
+            <span class="text-gray-600">|</span>
+            <a href="#" class="hover:text-accent-gold transition duration-300">Privacy Policy</a>
+        </div>
+    </div>
+</footer>

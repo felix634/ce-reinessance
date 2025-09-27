@@ -1,0 +1,30 @@
+/* src/styles/global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Set the primary dark background for the entire page */
+body {
+    @apply bg-background-dark text-text-light font-sans;
+    min-height: 100vh;
+}
+
+/* Base styles for h1, h2, etc., using the accent color */
+h1, h2, h3 {
+    @apply text-accent-gold;
+}
+
+/* Custom scrollbar for a professional look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #1c1c1c;
+}
+::-webkit-scrollbar-thumb {
+    background: #a87932;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #c09146;
+}
