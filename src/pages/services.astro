@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import AnimateOnScroll from '../components/AnimateOnScroll.astro'; // NEW IMPORT
+import AnimateOnScroll from '../components/AnimateOnScroll.astro'; // Required for animations
 
 const services = [
     {
@@ -40,7 +40,7 @@ const services = [
         {services.map((service, index) => (
             <AnimateOnScroll animation={index % 2 === 0 ? "fade-right" : "fade-left"}>
                 <div 
-                    class="bg-primary-dark p-8 rounded-xl shadow-2xl border-t-4 border-accent-gold flex flex-col justify-between transition duration-500 hover:shadow-3xl hover:bg-[#252525]"
+                    class="bg-primary-dark p-8 rounded-xl shadow-2xl border-t-4 border-accent-gold flex flex-col justify-between transition duration-500 hover:shadow-3xl hover:bg-[#252525] h-full"
                 >
                     <div>
                         <h2 class="text-3xl font-bold mb-2 text-white">{service.title}</h2>
