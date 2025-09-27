@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import LogoScroller from '../components/LogoScroller.astro'; // <-- New Component Import
 ---
 
 <Layout title="Luxury Home & Heritage Renovation in Central Europe">
@@ -31,7 +32,9 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </section>
 
-    <section class="grid md:grid-cols-3 gap-8 mb-16">
+    <LogoScroller />
+
+    <section class="grid md:grid-cols-3 gap-8 my-16">
         <div class="p-6 bg-primary-dark rounded-lg shadow-xl border-t-4 border-accent-gold transition duration-500 hover:shadow-2xl hover:bg-[#252525]">
             <h2 class="text-2xl font-bold mb-3">Heritage Restoration</h2>
             <p class="text-gray-300">Preserving the past with precision, using authentic materials and expert craftsmanship.</p>

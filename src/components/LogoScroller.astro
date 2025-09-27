@@ -1,0 +1,59 @@
+---
+// src/components/LogoScroller.astro
+
+// Define the path to your single PNG company logo
+const singleLogoPath = '/assets/images/logos/ce-reinessance-logo.png';
+
+// Create an array of 15 instances of the logo path to fill the horizontal space
+const logosToDisplay = Array(15).fill(singleLogoPath);
+
+// The speed of the scroll (e.g., 35 seconds for a medium pace)
+const scrollDuration = '35s'; 
+---
+<section class="py-16 bg-primary-dark/50 border-y border-primary-dark overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-center text-xl font-semibold text-gray-400 mb-10 uppercase tracking-widest">
+            A Hallmark of Quality Renovation in Central Europe
+        </h2>
+        
+        <div class="scroller-container">
+            <div 
+                class="flex space-x-12 group"
+                style={`animation-duration: ${scrollDuration};`}
+            >
+                {logosToDisplay.concat(logosToDisplay).map((logoPath, index) => (
+                    <div class="flex-shrink-0 w-32 h-10 flex items-center justify-center 
+                                 opacity-40 hover:opacity-100 transition duration-500 ease-in-out"
+                    >
+                        <img 
+                            src={logoPath} 
+                            alt={`CE Reinessance Logo ${index}`} 
+                            class="max-h-full w-auto object-contain" 
+                            loading="lazy" 
+                        />
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
+</section>
+
+<style define:vars={{ scrollDuration }}>
+    .scroller-container {
+        /* Hides content that scrolls outside the viewport */
+        overflow: hidden; 
+    }
+
+    /* Apply the animation directly to the inner flex div */
+    .scroller-container > div {
+        display: flex;
+        /* Width must be exactly double the necessary content width for infinite loop */
+        width: max-content; 
+        /* Apply the custom animation */
+        animation: scroll var(--scrollDuration) linear infinite;
+        /* Pause the scroll on hover for a premium effect */
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+</style>
