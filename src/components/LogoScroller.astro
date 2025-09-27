@@ -1,13 +1,15 @@
 ---
 // src/components/LogoScroller.astro
 
-// Define the path to your single PNG company logo
+// Define the CORRECTED path to your single PNG company logo
+// This path assumes your logo file is named 'ce-reinessance-logo.png' 
+// and is located in 'public/assets/logos/'
 const singleLogoPath = '/assets/images/logos/ce-reinessance-logo.png';
 
 // Create an array of 15 instances of the logo path to fill the horizontal space
 const logosToDisplay = Array(15).fill(singleLogoPath);
 
-// The speed of the scroll (e.g., 35 seconds for a medium pace)
+// The speed of the scroll (35 seconds)
 const scrollDuration = '35s'; 
 ---
 <section class="py-16 bg-primary-dark/50 border-y border-primary-dark overflow-hidden">
@@ -49,7 +51,7 @@ const scrollDuration = '35s';
         display: flex;
         /* Width must be exactly double the necessary content width for infinite loop */
         width: max-content; 
-        /* Apply the custom animation */
+        /* Apply the custom animation defined in tailwind.config.mjs */
         animation: scroll var(--scrollDuration) linear infinite;
         /* Pause the scroll on hover for a premium effect */
         &:hover {
