@@ -16,14 +16,14 @@ const links = [
                 CE Reinessance
             </a>
 
-            <nav class="hidden md:flex space-x-4 md:space-x-6"> 
+            <nav class="hidden md:flex space-x-4 md:space-x-6">
                 {links.map((link) => (
                     <NavLink href={link.href} text={link.text} />
                 ))}
             </nav>
 
             <div class="md:hidden">
-                <button class="text-text-light focus:outline-none p-2 rounded-md hover:bg-accent-gold/20 transition duration-300">
+                <button id="menu-toggle" class="text-text-light focus:outline-none p-2 rounded-md hover:bg-accent-gold/20 transition duration-300">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
@@ -31,4 +31,29 @@ const links = [
             </div>
         </div>
     </div>
+    
+    <nav id="mobile-menu" class="hidden md:hidden absolute w-full bg-primary-dark/95 shadow-lg border-t border-gray-700 pb-2">
+        <div class="flex flex-col items-center space-y-1 py-3">
+            {links.map((link) => (
+                <NavLink 
+                    href={link.href} 
+                    text={link.text} 
+                    // Adjusted classes for mobile links 
+                    class="w-full text-center py-2 hover:bg-accent-gold/20"
+                />
+            ))}
+        </div>
+    </nav>
 </header>
+
+<script is:inline>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+
+    if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+            // Toggles the 'hidden' class to show/hide the menu
+            menu.classList.toggle('hidden');
+        });
+    }
+</script>

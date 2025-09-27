@@ -2,10 +2,12 @@
 interface Props {
     href: string;
     text: string;
+    // Added optional class prop
+    class?: string; 
 }
 
-const { href, text } = Astro.props;
-const currentPath = Astro.url.pathname.replace(/\/$/, ''); // Remove trailing slash
+const { href, text, class: className } = Astro.props; // Renamed 'class' to 'className'
+const currentPath = Astro.url.pathname.replace(/\/$/, '');
 const isActive = currentPath === href.replace(/\/$/, '');
 ---
 <a
@@ -15,6 +17,7 @@ const isActive = currentPath === href.replace(/\/$/, '');
         isActive
             ? "text-accent-gold border-b-2 border-accent-gold"
             : "text-text-light hover:text-accent-gold hover:border-b-2 hover:border-accent-gold/50",
+        className // Apply the optional class (used for mobile styling)
     ]}
     aria-current={isActive ? "page" : false}
 >
