@@ -85,26 +85,42 @@ import AnimateOnScroll from '../components/AnimateOnScroll.astro';
         </AnimateOnScroll>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <AnimateOnScroll animation="fade-up" delay={100}><div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03]">
-                <p class="text-accent-gold text-4xl mb-3">01</p>
-                <h3 class="text-xl font-bold mb-2 text-white">Consultation & Scope</h3>
-                <p class="text-gray-400">Defining your vision, detailed assessment of the property, and establishing the foundational budget.</p>
-            </div></AnimateOnScroll>
-            <AnimateOnScroll animation="fade-up" delay={200}><div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03]">
-                <p class="text-accent-gold text-4xl mb-3">02</p>
-                <h3 class="text-xl font-bold mb-2 text-white">Design & Heritage Review</h3>
-                <p class="text-gray-400">Architectural planning, compliance with preservation laws, and final material selection.</p>
-            </div></AnimateOnScroll>
-            <AnimateOnScroll animation="fade-up" delay={300}><div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03]">
-                <p class="text-accent-gold text-4xl mb-3">03</p>
-                <h3 class="text-xl font-bold mb-2 text-white">Execution & Craftsmanship</h3>
-                <p class="text-gray-400">On-site renovation management, quality control, and integration of modern systems.</p>
-            </div></AnimateOnScroll>
-            <AnimateOnScroll animation="fade-up" delay={400}><div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03]">
-                <p class="text-accent-gold text-4xl mb-3">04</p>
-                <h3 class="text-xl font-bold mb-2 text-white">Handover & Guarantee</h3>
-                <p class="text-gray-400">Final client walkthrough, project handover, and comprehensive quality assurance guarantee.</p>
-            </div></AnimateOnScroll>
+            <AnimateOnScroll animation="fade-up" delay={100}>
+                <div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03] h-full flex flex-col justify-between">
+                    <div>
+                        <p class="text-accent-gold text-4xl mb-3">01</p>
+                        <h3 class="text-xl font-bold mb-2 text-white">Consultation & Scope</h3>
+                    </div>
+                    <p class="text-gray-400 mt-2">Defining your vision, detailed assessment of the property, and establishing the foundational budget.</p>
+                </div>
+            </AnimateOnScroll>
+            <AnimateOnScroll animation="fade-up" delay={200}>
+                <div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03] h-full flex flex-col justify-between">
+                    <div>
+                        <p class="text-accent-gold text-4xl mb-3">02</p>
+                        <h3 class="text-xl font-bold mb-2 text-white">Design & Heritage Review</h3>
+                    </div>
+                    <p class="text-gray-400 mt-2">Architectural planning, compliance with preservation laws, and final material selection.</p>
+                </div>
+            </AnimateOnScroll>
+            <AnimateOnScroll animation="fade-up" delay={300}>
+                <div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03] h-full flex flex-col justify-between">
+                    <div>
+                        <p class="text-accent-gold text-4xl mb-3">03</p>
+                        <h3 class="text-xl font-bold mb-2 text-white">Execution & Craftsmanship</h3>
+                    </div>
+                    <p class="text-gray-400 mt-2">On-site renovation management, quality control, and integration of modern systems.</p>
+                </div>
+            </AnimateOnScroll>
+            <AnimateOnScroll animation="fade-up" delay={400}>
+                <div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03] h-full flex flex-col justify-between">
+                    <div>
+                        <p class="text-accent-gold text-4xl mb-3">04</p>
+                        <h3 class="text-xl font-bold mb-2 text-white">Handover & Guarantee</h3>
+                    </div>
+                    <p class="text-gray-400 mt-2">Final client walkthrough, project handover, and comprehensive quality assurance guarantee.</p>
+                </div>
+            </AnimateOnScroll>
         </div>
     </section>
 
