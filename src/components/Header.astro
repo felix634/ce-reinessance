@@ -12,11 +12,11 @@ const links = [
 <header class="sticky top-0 z-50 bg-primary-dark/95 backdrop-blur-sm shadow-xl transition duration-500">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
-            <a href="/" class="text-2xl font-bold tracking-wider text-accent-gold hover:text-white transition duration-300">
+            <a href="/" class="text-xl sm:text-2xl font-bold tracking-wider text-accent-gold hover:text-white transition duration-300">
                 CE Reinessance
             </a>
 
-            <nav class="hidden md:flex space-x-6">
+            <nav class="hidden md:flex space-x-4 md:space-x-6"> 
                 {links.map((link) => (
                     <NavLink href={link.href} text={link.text} />
                 ))}
