@@ -1,13 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-// LogoScroller is removed
 ---
 
 <Layout title="Luxury Home & Heritage Renovation in Central Europe">
-    <!-- 1. Hero Section -->
     <section class="relative h-[80vh] min-h-[500px] mb-20">
         <div class="absolute inset-0">
-            <!-- Full size image with dark overlay -->
             <img 
                 src="/assets/images/hero.png" 
                 alt="Modern luxury living room interior" 
@@ -18,12 +15,10 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="relative z-10 flex flex-col justify-center items-center h-full text-center p-4">
-            <!-- Optimized H1 size for mobile -->
             <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-4 leading-tight text-white drop-shadow-lg tracking-wider">
                 <span class="text-accent-gold block mb-2">CE Reinessance</span>
                 Architectural Restoration
             </h1>
-            <!-- Optimized P size for mobile -->
             <p class="text-lg sm:text-xl md:text-2xl text-text-light max-w-3xl mb-8 drop-shadow-md">
                 Masterful renovation and preservation of heritage and luxury properties across Central Europe.
             </p>
@@ -36,8 +31,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </section>
 
-    <!-- 2. Services Teaser Section (Ensured closing tags are correct) -->
-    <section class="grid md:grid-cols-3 gap-8 mb-20">
+    <section class="grid md:grid-cols-3 gap-8 mb-20" data-aos="fade-up">
         <div class="p-6 bg-primary-dark rounded-lg shadow-xl border-t-4 border-accent-gold transition duration-500 hover:shadow-2xl hover:bg-[#252525]">
             <h2 class="text-2xl font-bold mb-3">Heritage Restoration</h2>
             <p class="text-gray-300">Preserving the past with precision, using authentic materials and expert craftsmanship.</p>
@@ -52,8 +46,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </section>
     
-    <!-- 3. NEW: Quality & Heritage Focus Section (Trust Builder) -->
-    <section class="mb-20 py-16 bg-primary-dark rounded-xl shadow-2xl">
+    <section class="mb-20 py-16 bg-primary-dark rounded-xl shadow-2xl" data-aos="fade-right">
         <div class="grid md:grid-cols-2 gap-10 items-center px-8">
             <div>
                 <h2 class="text-3xl font-bold mb-4 text-white">Uncompromising Quality, Unmatched Heritage Expertise</h2>
@@ -64,7 +57,6 @@ import Layout from '../layouts/Layout.astro';
                     Meet Our Masters &rarr;
                 </a>
             </div>
-            <!-- Features list emphasizing the unique offering -->
             <div class="space-y-4">
                 <div class="flex items-start">
                     <span class="text-accent-gold text-2xl mr-3 mt-1">✓</span>
@@ -82,8 +74,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </section>
 
-    <!-- 4. NEW: Testimonial Section (Social Proof) -->
-    <section class="py-16 text-center">
+    <section class="py-16 text-center" data-aos="zoom-in">
         <h2 class="text-3xl font-bold mb-10">Voices of <span class="text-white">Our Clients</span></h2>
         <blockquote class="max-w-4xl mx-auto italic text-gray-200">
             <span class="text-accent-gold text-5xl font-serif leading-none mr-2">"</span>
@@ -97,34 +88,29 @@ import Layout from '../layouts/Layout.astro';
         </blockquote>
     </section>
 
-    <!-- 5. NEW: Process Transparency Section (Conversion Driver) -->
     <section class="mb-20 py-16">
-        <h2 class="text-4xl font-bold text-center mb-12">Our 4-Step <span class="text-white">Renaissance Process</span></h2>
+        <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Our 4-Step <span class="text-white">Renaissance Process</span></h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             
-            <!-- Step 1 -->
-            <div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03]">
+            <div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03]" data-aos="fade-up" data-aos-delay="100">
                 <p class="text-accent-gold text-4xl mb-3">01</p>
                 <h3 class="text-xl font-bold mb-2 text-white">Consultation & Scope</h3>
                 <p class="text-gray-400">Defining your vision, detailed assessment of the property, and establishing the foundational budget.</p>
             </div>
             
-            <!-- Step 2 -->
-            <div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03]">
+            <div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03]" data-aos="fade-up" data-aos-delay="200">
                 <p class="text-accent-gold text-4xl mb-3">02</p>
                 <h3 class="text-xl font-bold mb-2 text-white">Design & Heritage Review</h3>
                 <p class="text-gray-400">Architectural planning, compliance with preservation laws, and final material selection.</p>
             </div>
 
-            <!-- Step 3 -->
-            <div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03]">
+            <div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03]" data-aos="fade-up" data-aos-delay="300">
                 <p class="text-accent-gold text-4xl mb-3">03</p>
                 <h3 class="text-xl font-bold mb-2 text-white">Execution & Craftsmanship</h3>
                 <p class="text-gray-400">On-site renovation management, quality control, and integration of modern systems.</p>
             </div>
 
-            <!-- Step 4 -->
-            <div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03]">
+            <div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03]" data-aos="fade-up" data-aos-delay="400">
                 <p class="text-accent-gold text-4xl mb-3">04</p>
                 <h3 class="text-xl font-bold mb-2 text-white">Handover & Guarantee</h3>
                 <p class="text-gray-400">Final client walkthrough, project handover, and comprehensive quality assurance guarantee.</p>
@@ -132,8 +118,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </section>
 
-    <!-- 6. Call to Action (Existing) -->
-    <section class="bg-primary-dark p-10 rounded-lg shadow-2xl text-center">
+    <section class="bg-primary-dark p-10 rounded-lg shadow-2xl text-center" data-aos="fade">
         <h2 class="text-4xl font-bold mb-4">See Our Latest Work</h2>
         <p class="text-lg text-text-light mb-6">View our portfolio of successful projects in Budapest, Vienna, and Prague.</p>
         <a 
