@@ -1,10 +1,8 @@
 ---
 // src/components/LogoScroller.astro
 
-// Define the CORRECTED path to your single PNG company logo
-// This path assumes your logo file is named 'ce-reinessance-logo.png' 
-// and is located in 'public/assets/logos/'
-const singleLogoPath = '/assets/images/logos/ce-reinessance-logo.png';
+// !!! CORRECTED PATH: Removed '/images' from the path !!!
+const singleLogoPath = '/assets/logos/ce-reinessance-logo.png'; 
 
 // Create an array of 15 instances of the logo path to fill the horizontal space
 const logosToDisplay = Array(15).fill(singleLogoPath);
