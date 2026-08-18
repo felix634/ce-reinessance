@@ -1,25 +1,8 @@
 ---
-interface Props {
-    href: string;
-    text: string;
-    // Added optional class prop
-    class?: string; 
-}
-
-const { href, text, class: className } = Astro.props; // Renamed 'class' to 'className'
-const currentPath = Astro.url.pathname.replace(/\/$/, '');
-const isActive = currentPath === href.replace(/\/$/, '');
+interface Props { href: string; text: string; }
+const { href, text } = Astro.props;
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const target = href.replace(/\/$/, '') || '/';
+const isActive = path === target;
 ---
-<a
-    href={href}
-    class:list={[
-        "text-lg font-medium tracking-wide transition duration-300 ease-in-out",
-        isActive
-            ? "text-accent-gold border-b-2 border-accent-gold"
-            : "text-text-light hover:text-accent-gold hover:border-b-2 hover:border-accent-gold/50",
-        className // Apply the optional class (used for mobile styling)
-    ]}
-    aria-current={isActive ? "page" : false}
->
-    {text}
-</a>
+<a href={href} class:list={['nav-link', { active: isActive }]} aria-current={isActive ? 'page' : undefined}>{text}</a>

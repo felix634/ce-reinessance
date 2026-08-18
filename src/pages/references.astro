@@ -1,47 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import AnimateOnScroll from '../components/AnimateOnScroll.astro'; // Required for animations
+import PageHero from '../components/PageHero.astro';
 
 const projects = [
-    { title: 'The Ambassador\'s Residence', location: 'Budapest, Hungary', image: '/assets/images/budapest.png', description: 'Complete heritage facade and interior restoration of a 19th-century apartment building.' },
-    { title: 'Modern Penthouse Conversion', location: 'Prague, Czechia', image: '/assets/images/prague.png', description: 'Conversion of an historic attic into a high-tech luxury penthouse apartment.' },
-    { title: 'Classic City Townhouse', location: 'Vienna, Austria', image: '/assets/images/vienna.png', description: 'Full modernization of a Biedermeier-era townhouse while preserving original mouldings and floors.' },
-    { title: 'The Garden Estate', location: 'Warsaw, Poland', image: '/assets/images/warsaw.png', description: 'Comprehensive renovation of a suburban family estate, including extensive landscaping and structural upgrades.' },
+  { title: 'The Ambassador’s Residence', location: 'Budapest, Hungary', image: '/assets/images/budapest.png', type: 'Heritage restoration', description: 'A complete façade and interior restoration that reconnects formal 19th-century rooms with contemporary family life.' },
+  { title: 'The Old Town Penthouse', location: 'Prague, Czechia', image: '/assets/images/prague.png', type: 'Penthouse conversion', description: 'An unused historic roof volume transformed into a quiet, light-filled residence above Prague’s Old Town.' },
+  { title: 'The Quiet Townhouse', location: 'Vienna, Austria', image: '/assets/images/vienna.png', type: 'Luxury modernisation', description: 'Biedermeier proportions, floors and plasterwork preserved around a restrained new material language.' },
+  { title: 'The Garden Estate', location: 'Warsaw, Poland', image: '/assets/images/warsaw.png', type: 'Full property renewal', description: 'A generous family estate renewed from structure to landscape, with greatly improved comfort and performance.' },
 ];
 ---
 
-<Layout title="Our Renovation Portfolio & Reference Work">
-    <h1 class="text-4xl font-bold mb-4 text-center">References: <span class="text-white">Our Signature Projects</span></h1>
-    <p class="text-xl text-gray-400 text-center mb-12 max-w-3xl mx-auto">
-        A selection of our finest work, demonstrating our capability in both historic preservation and contemporary luxury modernization across Central Europe.
-    </p>
+<Layout title="Selected Restoration Projects" description="Explore selected CE Reinessance restoration and modernisation projects in Budapest, Vienna, Prague and Warsaw.">
+  <PageHero eyebrow="Selected work" title="Four places. Four new chapters." intro="Each building asked a different question. Our answer in every case was shaped by its architecture, its city and the people who would call it home." index="03" />
 
-    <div class="grid lg:grid-cols-2 gap-12">
-        {projects.map((project, index) => (
-            <AnimateOnScroll animation="fade-up" delay={index * 150}>
-                <div 
-                    class="bg-primary-dark rounded-xl shadow-2xl overflow-hidden group h-full flex flex-col"
-                >
-                    <div class="h-64 overflow-hidden">
-                        <img 
-                            src={project.image} 
-                            alt={`Project photo from ${project.location}`} 
-                            class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-in-out" 
-                            loading="lazy"
-                        />
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col justify-between">
-                        <div>
-                            <h2 class="text-3xl font-bold mb-1 text-white">{project.title}</h2>
-                            <p class="text-accent-gold text-lg mb-3 font-medium">{project.location}</p>
-                            <p class="text-gray-300 mb-4">{project.description}</p>
-                        </div>
-                        <a href="/contact" class="text-sm text-accent-gold hover:text-white transition duration-300 border-b border-accent-gold hover:border-white mt-auto">
-                            Inquire about similar projects &rarr;
-                        </a>
-                    </div>
-                </div>
-            </AnimateOnScroll>
-        ))}
+  <section class="section-compact shell">
+    <div class="project-grid">
+      {projects.map((project) => (
+        <article class="project-card">
+          <img src={project.image} alt={`${project.title} in ${project.location}`} loading="lazy" />
+          <div class="project-card-info"><div><p class="project-location">{project.location} · {project.type}</p><h2>{project.title}</h2><p>{project.description}</p></div><a class="project-arrow" href="/contact" aria-label={`Enquire about a project like ${project.title}`}>↗</a></div>
+        </article>
+      ))}
     </div>
+  </section>
+
+  <section class="section shell quote-section"><div><p class="eyebrow">The common thread</p><p>Tailored, never templated</p></div><blockquote>“A successful restoration should feel inevitable—as if the building had always been waiting to become exactly this.”<p class="quote-byline">CE Reinessance design team</p></blockquote></section>
+  <section class="cta-panel"><div><p class="eyebrow">Your next chapter</p><h2>Have a property in mind? We would like to hear its story.</h2></div><div class="cta-actions"><a class="button button-light" href="/contact">Discuss your project <span aria-hidden="true">↗</span></a><a class="text-link light" href="/services">Explore services</a></div></section>
 </Layout>

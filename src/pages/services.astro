@@ -1,75 +1,37 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import AnimateOnScroll from '../components/AnimateOnScroll.astro'; // Required for animations
+import PageHero from '../components/PageHero.astro';
 
 const services = [
-    {
-        title: 'Full Heritage Restoration',
-        description: 'Detailed, historically accurate restoration of facades, interiors, and structural elements of classified buildings. Includes coordination with national heritage bodies.',
-        details: ['Facade Restoration', 'Authentic Material Sourcing', 'Structural Preservation'],
-        price: 'Project-Based Quote',
-    },
-    {
-        title: 'Luxury Interior Modernization',
-        description: 'Complete overhaul of interior spaces, integrating high-end finishes, smart home technology, and bespoke joinery into historic shells.',
-        details: ['Smart Home Integration', 'Bespoke Kitchens & Bathrooms', 'Interior Design Consulting'],
-        price: 'Starting at €2,500/sqm',
-    },
-    {
-        title: 'Architectural Project Management',
-        description: 'End-to-end management of complex renovation projects, overseeing all contractors, timelines, budgets, and quality control.',
-        details: ['Permitting & Compliance', 'Budget Management', 'Contractor Supervision'],
-        price: '15% of Project Value',
-    },
-    {
-        title: 'Pre-Purchase Property Assessment',
-        description: 'Detailed technical assessment of a property\'s condition and feasibility study for potential renovation before purchase.',
-        details: ['Structural Review', 'Cost Estimation', 'Renovation Feasibility Report'],
-        price: 'Fixed Fee: €1,500',
-    },
+  { number: '01', title: 'Heritage restoration', description: 'Historically informed restoration of façades, interiors and structural elements, coordinated with relevant conservation authorities.', details: ['Historic fabric survey', 'Façade and detail conservation', 'Authentic material sourcing'], price: 'Tailored project fee' },
+  { number: '02', title: 'Luxury modernisation', description: 'A complete interior transformation that brings modern comfort, refined materiality and intelligent technology to historic spaces.', details: ['Bespoke kitchens and joinery', 'Lighting and smart systems', 'Interior architecture'], price: 'From €2,500 / m²' },
+  { number: '03', title: 'Project direction', description: 'Senior oversight of every workstream—from approvals and appointments to procurement, programme, budget and on-site quality.', details: ['Permits and compliance', 'Contractor coordination', 'Cost and quality control'], price: 'From 15% of project value' },
+  { number: '04', title: 'Property assessment', description: 'A clear technical and commercial view of a property before purchase or design commitment, including its renovation potential.', details: ['Condition and structural review', 'Feasibility guidance', 'Outline cost plan'], price: 'Fixed fee from €1,500' },
 ];
 ---
 
-<Layout title="Prices and Services for Renovation and Restoration">
-    <h1 class="text-4xl font-bold mb-4 text-center">Prices & <span class="text-white">Services</span></h1>
-    <p class="text-xl text-gray-400 text-center mb-12 max-w-3xl mx-auto">
-        We offer a modular range of services tailored to the specific needs of high-value properties in Central Europe. Contact us for a precise, detailed quotation.
-    </p>
+<Layout title="Renovation Services" description="Heritage restoration, luxury modernisation, project direction and pre-purchase assessments for significant Central European properties.">
+  <PageHero eyebrow="What we deliver" title="One studio. Every critical detail." intro="From a focused pre-purchase review to a complete multi-year restoration, our services can stand alone or form one continuous, accountable commission." index="02" />
 
-    <div class="grid lg:grid-cols-2 gap-8">
-        {services.map((service, index) => (
-            <AnimateOnScroll animation={index % 2 === 0 ? "fade-right" : "fade-left"}>
-                <div 
-                    class="bg-primary-dark p-8 rounded-xl shadow-2xl border-t-4 border-accent-gold flex flex-col justify-between transition duration-500 hover:shadow-3xl hover:bg-[#252525] h-full"
-                >
-                    <div>
-                        <h2 class="text-3xl font-bold mb-2 text-white">{service.title}</h2>
-                        <p class="text-gray-300 mb-4">{service.description}</p>
-                        <ul class="list-disc list-inside text-gray-400 mb-6 space-y-1 ml-4">
-                            {service.details.map((detail) => (
-                                <li>{detail}</li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div class="pt-4 border-t border-gray-700">
-                        <p class="text-2xl font-semibold text-accent-gold">{service.price}</p>
-                        <a 
-                            href="/contact" 
-                            class="mt-3 inline-block text-sm font-medium text-white border border-white px-4 py-2 rounded-full hover:bg-accent-gold hover:border-accent-gold transition duration-300"
-                        >
-                            Request Consultation
-                        </a>
-                    </div>
-                </div>
-            </AnimateOnScroll>
-        ))}
+  <section class="section-compact shell">
+    <div class="service-list">
+      {services.map((service) => (
+        <article class="service-row">
+          <span>{service.number}</span>
+          <h2>{service.title}</h2>
+          <div><p>{service.description}</p><ul>{service.details.map((detail) => <li>{detail}</li>)}</ul></div>
+          <div><p class="service-price">{service.price}</p><a class="text-link" href="/contact">Enquire <span aria-hidden="true">↗</span></a></div>
+        </article>
+      ))}
     </div>
-    
-    <AnimateOnScroll animation="fade-up">
-        <div class="mt-16 text-center bg-gray-900 p-8 rounded-lg">
-            <p class="text-lg text-gray-300">
-                *All prices are estimates and vary based on the complexity, scale, and location of the project.
-            </p>
-        </div>
-    </AnimateOnScroll>
+  </section>
+
+  <section class="section section-dark">
+    <div class="shell">
+      <div class="section-heading"><p class="section-kicker">Included by design</p><h2>Calm leadership for<br />complex work.</h2><p>The right answer is rarely a catalogue package. We shape the team and scope around the property, then keep every decision visible.</p></div>
+      <div class="process-grid"><div class="process-step"><span>A</span><h3>Senior access</h3><p>A lead project director remains close to every important decision.</p></div><div class="process-step"><span>B</span><h3>Clear reporting</h3><p>Programme, budget, risk and next decisions are shared without ambiguity.</p></div><div class="process-step"><span>C</span><h3>Curated teams</h3><p>Specialists are chosen for the property—not from a fixed contractor list.</p></div><div class="process-step"><span>D</span><h3>Aftercare</h3><p>Our relationship continues beyond handover and final completion.</p></div></div>
+    </div>
+  </section>
+
+  <section class="cta-panel"><div><p class="eyebrow">A considered first step</p><h2>Start with a private project consultation.</h2></div><div class="cta-actions"><a class="button button-light" href="/contact">Request a consultation <span aria-hidden="true">↗</span></a><p>Every engagement begins with a conversation about the property, ambition and timing.</p></div></section>
 </Layout>

@@ -1,53 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import AnimateOnScroll from '../components/AnimateOnScroll.astro'; // NEW IMPORT
+import PageHero from '../components/PageHero.astro';
+import AnimateOnScroll from '../components/AnimateOnScroll.astro';
 ---
 
-<Layout title="About CE Reinessance - Our Story and Mission">
-    <h1 class="text-4xl font-bold mb-8 text-center">About <span class="text-white">CE Reinessance</span></h1>
+<Layout title="Our Restoration Studio" description="Meet the Budapest-based CE Reinessance studio and our approach to heritage-led renovation across Central Europe.">
+  <PageHero eyebrow="The studio" title="Built on respect for what endures." intro="We are a Budapest-based collective of architects, craftspeople and project leaders united by one belief: the best renovations make a historic building feel more itself—not less." index="01" />
 
-    <AnimateOnScroll animation="fade-up">
-        <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div class="order-2 md:order-1">
-                <h2 class="text-3xl font-semibold mb-4 text-white">Our Mission: Reviving Central European Splendor</h2>
-                <p class="text-gray-300 mb-4 text-lg leading-relaxed">
-                    Founded in Budapest, **CE Reinessance** was established with a clear vision: to bring the region's historic architectural treasures into the modern era without sacrificing their inherent character. We specialize in complex, high-end renovations of residential and commercial properties.
-                </p>
-                <p class="text-gray-400 leading-relaxed">
-                    Our team comprises master craftsmen, preservation architects, and modern interior designers. We approach every project—from the grandeur of a Viennese palace to the elegance of an old town Prague apartment—with the utmost respect for history and an eye for future-proof luxury. Our operations are centered in Hungary, providing seamless service across key Central European cities.
-                </p>
-            </div>
-            <div class="order-1 md:order-2 shadow-2xl rounded-lg overflow-hidden transform hover:scale-[1.02] transition duration-500">
-                <img 
-                    src="/assets/images/about.png" 
-                    alt="CE Reinessance team outside a renovated building" 
-                    class="w-full h-auto object-cover" 
-                    loading="lazy"
-                />
-            </div>
-        </div>
-    </AnimateOnScroll>
+  <section class="section section-dark">
+    <div class="shell split-media">
+      <AnimateOnScroll><img src="/assets/images/about.png" alt="CE Reinessance team in front of a restored brick residence" loading="eager" /></AnimateOnScroll>
+      <AnimateOnScroll delay={120} class="split-copy">
+        <p class="eyebrow">A regional point of view</p>
+        <h2>Local knowledge. International standards.</h2>
+        <p>Central Europe’s architectural fabric is remarkably varied—and deeply regulated. Our network brings together local permitting knowledge, traditional craft and contemporary technical expertise in every city where we work.</p>
+        <p>Clients deal with one accountable studio throughout. Behind that single relationship is a carefully assembled team specific to the property, its era and the ambition for its future.</p>
+        <div class="stat-row"><div class="stat"><strong>4</strong><span>Capital cities</span></div><div class="stat"><strong>1</strong><span>Lead team</span></div><div class="stat"><strong>360°</strong><span>Project oversight</span></div></div>
+      </AnimateOnScroll>
+    </div>
+  </section>
 
-    <AnimateOnScroll animation="fade-up" delay={200}>
-        <section class="bg-primary-dark p-10 rounded-lg shadow-xl">
-            <h2 class="text-3xl font-bold text-center mb-8 text-white">Core Values</h2>
-            <div class="grid sm:grid-cols-3 gap-8 text-center">
-                <div class="p-4">
-                    <p class="text-accent-gold text-5xl mb-3">🛠️</p>
-                    <h3 class="text-xl font-semibold mb-2 text-white">Craftsmanship</h3>
-                    <p class="text-gray-400">Uncompromising quality and attention to historical detail.</p>
-                </div>
-                <div class="p-4">
-                    <p class="text-accent-gold text-5xl mb-3">🌍</p>
-                    <h3 class="text-xl font-semibold mb-2 text-white">Integrity</h3>
-                    <p class="text-gray-400">Transparent processes and honest client relationships.</p>
-                </div>
-                <div class="p-4">
-                    <p class="text-accent-gold text-5xl mb-3">✨</p>
-                    <h3 class="text-xl font-semibold mb-2 text-white">Innovation</h3>
-                    <p class="text-gray-400">Applying modern sustainable techniques to age-old structures.</p>
-                </div>
-            </div>
-        </section>
-    </AnimateOnScroll>
+  <section class="section shell">
+    <AnimateOnScroll><div class="section-heading"><p class="section-kicker">How we work</p><h2>The details are<br />the design.</h2><p>Our decisions are guided by three principles that hold from the earliest survey through to the last piece of fitted joinery.</p></div></AnimateOnScroll>
+    <div class="value-grid">
+      <article class="value-card"><span>01</span><h3>Listen before drawing</h3><p>The building, its archives and its current owners all have something essential to tell us. Discovery shapes every proposal.</p></article>
+      <article class="value-card"><span>02</span><h3>Intervene with purpose</h3><p>Every new material and system must earn its place. We favour clarity, durability and a quiet dialogue with the original fabric.</p></article>
+      <article class="value-card"><span>03</span><h3>Make quality visible</h3><p>Good project leadership is felt in the finish: aligned teams, transparent decisions and craft delivered without compromise.</p></article>
+    </div>
+  </section>
+
+  <section class="section shell quote-section">
+    <div><p class="eyebrow">Our responsibility</p><p>Past · Present · Future</p></div>
+    <blockquote>“Restoration is not nostalgia. It is the disciplined act of carrying value forward.”<p class="quote-byline">CE Reinessance studio principle</p></blockquote>
+  </section>
+
+  <section class="cta-panel"><div><p class="eyebrow">Work with us</p><h2>Bring us a building with a story worth continuing.</h2></div><div class="cta-actions"><a class="button button-light" href="/contact">Meet the studio <span aria-hidden="true">↗</span></a><a class="text-link light" href="/references">View our work</a></div></section>
 </Layout>

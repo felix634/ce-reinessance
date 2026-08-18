@@ -4,30 +4,45 @@ import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 interface Props {
-	title: string;
+  title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const {
+  title,
+  description = 'CE Reinessance restores and modernises exceptional homes and heritage properties across Central Europe.',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
+const socialImageURL = new URL('/og.png', Astro.site ?? Astro.url.origin);
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="CE Reinessance - Central European Renovation Company" />
-		<meta name="viewport" content="width=device-width" />
-		
-        <link rel="icon" type="image/png" href="/favicon.png" /> 
-        
-		<title>{title} | CE Reinessance</title>
-	</head>
-	<body class="min-h-screen flex flex-col">
-		<Header />
-		<main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 animate-fadeIn">
-			<slot />
-		</main>
-		<Footer />
-
-        <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147812481.js"></script>
-        </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#17352c" />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${title} | CE Reinessance`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={socialImageURL} />
+    <meta property="og:image:alt" content="CE Reinessance — Heritage, precisely reimagined" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} | CE Reinessance`} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} />
+    <title>{title} | CE Reinessance</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <Header />
+    <main id="main-content"><slot /></main>
+    <Footer />
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147812481.js"></script>
+  </body>
 </html>

@@ -1,18 +1,32 @@
 ---
 const currentYear = new Date().getFullYear();
 ---
-<footer class="mt-20 border-t border-primary-dark bg-primary-dark p-8 shadow-inner">
-    <div class="max-w-7xl mx-auto text-center text-sm text-gray-400">
-        <p class="mb-2">
-            CE Reinessance | Central European Renovation Specialists | Hungary-based Operations.
-        </p>
-        <p>
-            &copy; {currentYear} All rights reserved. | Built with Astro.
-        </p>
-        <div class="mt-4 flex justify-center space-x-6">
-            <a href="/contact" class="hover:text-accent-gold transition duration-300">Contact</a>
-            <span class="text-gray-600">|</span>
-            <a href="#" class="hover:text-accent-gold transition duration-300">Privacy Policy</a>
-        </div>
+<footer class="site-footer">
+  <div class="footer-shell">
+    <div class="footer-lead">
+      <a class="brand brand-light" href="/">
+        <span class="brand-mark" aria-hidden="true">CE</span>
+        <span class="brand-copy"><strong>CE Reinessance</strong><small>Heritage &amp; modern living</small></span>
+      </a>
+      <p>Historic character. Contemporary comfort.<br />One exacting standard.</p>
     </div>
+    <div>
+      <p class="footer-label">Explore</p>
+      <a href="/about">Our studio</a><a href="/services">Services</a><a href="/references">Selected projects</a>
+    </div>
+    <div>
+      <p class="footer-label">Visit</p>
+      <p>Budapest, Hungary<br />Serving Central Europe</p>
+      <a href="mailto:project-inquiry@cereinessance.com">project-inquiry@cereinessance.com</a>
+    </div>
+    <div>
+      <p class="footer-label">Start a conversation</p>
+      <p>Tell us about the property you want to bring forward.</p>
+      <a class="text-link light" href="/contact">Contact the studio <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+  <div class="footer-base">
+    <p>© {currentYear} CE Reinessance. A fictional company concept.</p>
+    <p>Budapest · Vienna · Prague · Warsaw</p>
+  </div>
 </footer>

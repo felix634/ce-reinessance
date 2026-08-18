@@ -1,19 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-
-<Layout title="Inquiry Sent Successfully">
-    <div class="text-center py-20 bg-primary-dark rounded-xl shadow-2xl">
-        <h1 class="text-5xl font-extrabold mb-4 text-accent-gold">Thank You!</h1>
-        <p class="text-2xl text-white mb-6">Your inquiry has been successfully received.</p>
-        <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
-            A specialist from the CE Reinessance team will review your project details and get back to you within one business day. We look forward to discussing your vision.
-        </p>
-        <a 
-            href="/" 
-            class="px-6 py-3 text-base font-semibold text-white border-2 border-white rounded-full hover:bg-accent-gold hover:border-accent-gold transition duration-500"
-        >
-            Return to Homepage
-        </a>
-    </div>
+<Layout title="Enquiry Received" description="Your CE Reinessance project enquiry has been received.">
+  <section class="success-card"><div><p class="eyebrow">Enquiry received</p><h1>Thank you for starting the conversation.</h1><p>Our studio will review the details and respond within one business day. We look forward to learning more about your property.</p><a class="button" href="/">Return home <span aria-hidden="true">↗</span></a></div></section>
 </Layout>

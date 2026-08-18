@@ -1,184 +1,100 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import AnimateOnScroll from '../components/AnimateOnScroll.astro'; 
+import AnimateOnScroll from '../components/AnimateOnScroll.astro';
+
+const services = [
+  { number: '01', title: 'Heritage restoration', copy: 'Sensitive conservation of façades, interiors and original architectural details—guided by specialists and local heritage requirements.' },
+  { number: '02', title: 'Luxury modernisation', copy: 'Contemporary comfort, bespoke joinery and intelligent systems introduced with restraint into character-rich properties.' },
+  { number: '03', title: 'Project direction', copy: 'One senior team coordinating permits, designers, craftspeople, programme and quality from first survey to final handover.' },
+];
 ---
 
-<Layout title="Luxury Home & Heritage Renovation in Central Europe">
-    <section class="relative h-[80vh] min-h-[500px] mb-20">
-        <div class="absolute inset-0">
-            <img 
-                src="/assets/images/hero.png" 
-                alt="Modern luxury living room interior" 
-                class="w-full h-full object-cover" 
-                loading="eager"
-            />
-            <div class="absolute inset-0 bg-black/60"></div>
-        </div>
+<Layout title="Exceptional Heritage Renovation in Central Europe" description="Heritage restoration, luxury modernisation and end-to-end renovation management across Budapest, Vienna, Prague and Warsaw.">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Central European restoration studio</p>
+      <h1>We restore the soul of <em>remarkable</em> places.</h1>
+      <p class="hero-lead">Historic character deserves more than preservation. We combine specialist craft, modern performance and calm project leadership to create homes that belong to both their past and their future.</p>
+      <div class="hero-actions">
+        <a class="button" href="/contact">Begin a conversation <span aria-hidden="true">↗</span></a>
+        <a class="button button-outline" href="/references">Explore selected work</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="/assets/images/hero.png" alt="Contemporary luxury interior with sculptural lighting and dark stone fireplace" loading="eager" />
+      <div class="hero-caption"><span>Private residence</span><span>Central Europe · 2025</span></div>
+    </div>
+  </section>
 
-        <div class="relative z-10 flex flex-col justify-center items-center h-full text-center p-4">
-            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-4 leading-tight text-white drop-shadow-lg tracking-wider">
-                <span class="text-accent-gold block mb-2">CE Reinessance</span>
-                Architectural Restoration
-            </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-text-light max-w-3xl mb-8 drop-shadow-md">
-                Masterful renovation and preservation of heritage and luxury properties across Central Europe.
-            </p>
-            <a 
-                href="/contact" 
-                class="px-8 py-3 text-lg font-semibold text-background-dark bg-accent-gold rounded-full shadow-lg hover:bg-white hover:text-accent-gold transition duration-500 transform hover:scale-105"
-            >
-                Start Your Project
-            </a>
-        </div>
-    </section>
+  <div class="city-bar" aria-label="Areas served">
+    <div class="city-bar-inner"><p>Working across the region</p><p>Budapest</p><p>Vienna</p><p>Prague</p><p>Warsaw</p></div>
+  </div>
 
-    <AnimateOnScroll animation="fade-up">
-        <section class="grid md:grid-cols-3 gap-8 mb-20">
-            <div class="p-6 bg-primary-dark rounded-lg shadow-xl border-t-4 border-accent-gold transition duration-500 hover:shadow-2xl hover:bg-[#252525]">
-                <h2 class="text-2xl font-bold mb-3">Heritage Restoration</h2>
-                <p class="text-gray-300">Preserving the past with precision, using authentic materials and expert craftsmanship.</p>
-            </div>
-            <div class="p-6 bg-primary-dark rounded-lg shadow-xl border-t-4 border-accent-gold transition duration-500 hover:shadow-2xl hover:bg-[#252525]">
-                <h2 class="text-2xl font-bold mb-3">Luxury Modernization</h2>
-                <p class="text-gray-300">Integrating cutting-edge technology and design into historic structures.</p>
-            </div>
-            <div class="p-6 bg-primary-dark rounded-lg shadow-xl border-t-4 border-accent-gold transition duration-500 hover:shadow-2xl hover:bg-[#252525]">
-                <h2 class="text-2xl font-bold mb-3">Central European Focus</h2>
-                <p class="text-gray-300">Operating in Hungary, Austria, Czechia, and Poland with local expertise.</p>
-            </div>
-        </section>
+  <section class="section shell">
+    <AnimateOnScroll>
+      <div class="section-heading">
+        <p class="section-kicker">What we do</p>
+        <h2>Old-world integrity.<br /><em>New-world ease.</em></h2>
+        <p>Every commission begins with the building itself. We listen to its logic, retain what matters and introduce only what improves the way it is lived in.</p>
+      </div>
     </AnimateOnScroll>
-    
-    <AnimateOnScroll animation="fade-right">
-        <section class="mb-20 py-16 bg-primary-dark rounded-xl shadow-2xl">
-            <div class="grid md:grid-cols-2 gap-10 items-center px-8">
-                <div>
-                    <h2 class="text-3xl font-bold mb-4 text-white">Uncompromising Quality, Unmatched Heritage Expertise</h2>
-                    <p class="text-lg text-gray-300 mb-6 leading-relaxed">
-                        Our commitment goes beyond standard renovation. We specialize in navigating the complex regulatory landscapes of Central European heritage properties, ensuring every detail—from custom millwork to material sourcing—adheres to both historical authenticity and modern luxury standards.
-                    </p>
-                    <a href="/about" class="text-accent-gold hover:text-white transition duration-300 font-semibold border-b border-accent-gold hover:border-white">
-                        Meet Our Masters &rarr;
-                    </a>
-                </div>
-                <div class="space-y-4">
-                    <div class="flex items-start">
-                        <span class="text-accent-gold text-2xl mr-3 mt-1">✓</span>
-                        <p class="text-gray-300"><strong class="text-white">Local Expertise:</strong> Deep knowledge of Hungarian, Austrian, Czech, and Polish construction standards.</p>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="text-accent-gold text-2xl mr-3 mt-1">✓</span>
-                        <p class="text-gray-300"><strong class="text-white">Authentic Materials:</strong> Direct sourcing of specialty materials for true historical integrity.</p>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="text-accent-gold text-2xl mr-3 mt-1">✓</span>
-                        <p class="text-gray-300"><strong class="text-white">Future-Proof Integration:</strong> Seamless installation of smart technology and sustainable systems.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </AnimateOnScroll>
-
-    <section class="mb-20 py-16">
-        <AnimateOnScroll animation="fade-up">
-            <h2 class="text-4xl font-bold text-center mb-12">Our 4-Step <span class="text-white">Renaissance Process</span></h2>
+    <div class="service-grid">
+      {services.map((service, index) => (
+        <AnimateOnScroll delay={index * 100}>
+          <article class="service-card">
+            <span class="service-number">{service.number}</span>
+            <h3>{service.title}</h3>
+            <p>{service.copy}</p>
+            <a class="text-link" href="/services">View service <span aria-hidden="true">↗</span></a>
+          </article>
         </AnimateOnScroll>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <AnimateOnScroll animation="fade-up" delay={100}>
-                <div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03] h-full flex flex-col justify-between">
-                    <div>
-                        <p class="text-accent-gold text-4xl mb-3">01</p>
-                        <h3 class="text-xl font-bold mb-2 text-white">Consultation & Scope</h3>
-                    </div>
-                    <p class="text-gray-400 mt-2">Defining your vision, detailed assessment of the property, and establishing the foundational budget.</p>
-                </div>
-            </AnimateOnScroll>
-            <AnimateOnScroll animation="fade-up" delay={200}>
-                <div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03] h-full flex flex-col justify-between">
-                    <div>
-                        <p class="text-accent-gold text-4xl mb-3">02</p>
-                        <h3 class="text-xl font-bold mb-2 text-white">Design & Heritage Review</h3>
-                    </div>
-                    <p class="text-gray-400 mt-2">Architectural planning, compliance with preservation laws, and final material selection.</p>
-                </div>
-            </AnimateOnScroll>
-            <AnimateOnScroll animation="fade-up" delay={300}>
-                <div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03] h-full flex flex-col justify-between">
-                    <div>
-                        <p class="text-accent-gold text-4xl mb-3">03</p>
-                        <h3 class="text-xl font-bold mb-2 text-white">Execution & Craftsmanship</h3>
-                    </div>
-                    <p class="text-gray-400 mt-2">On-site renovation management, quality control, and integration of modern systems.</p>
-                </div>
-            </AnimateOnScroll>
-            <AnimateOnScroll animation="fade-up" delay={400}>
-                <div class="p-6 bg-primary-dark rounded-xl shadow-xl border-b-4 border-accent-gold text-center transition duration-500 hover:scale-[1.03] h-full flex flex-col justify-between">
-                    <div>
-                        <p class="text-accent-gold text-4xl mb-3">04</p>
-                        <h3 class="text-xl font-bold mb-2 text-white">Handover & Guarantee</h3>
-                    </div>
-                    <p class="text-gray-400 mt-2">Final client walkthrough, project handover, and comprehensive quality assurance guarantee.</p>
-                </div>
-            </AnimateOnScroll>
+      ))}
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="shell">
+      <AnimateOnScroll>
+        <div class="section-heading">
+          <p class="section-kicker">Selected work</p>
+          <h2>Spaces with a<br />second life.</h2>
+          <p>Four cities, four distinct architectural languages—united by disciplined restoration and quietly confident modern interventions.</p>
         </div>
-    </section>
+      </AnimateOnScroll>
+      <AnimateOnScroll>
+        <article class="project-feature">
+          <div class="project-image"><img src="/assets/images/budapest.png" alt="Restored Budapest residence with historic façade and contemporary interior" loading="lazy" /></div>
+          <div class="project-info"><p class="project-meta">Budapest · Full restoration</p><h3>The Ambassador’s Residence</h3><p>A 19th-century city residence carefully opened to light while its original rhythm, stonework and street presence were preserved.</p><a class="text-link light" href="/references">See the project <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </AnimateOnScroll>
+      <AnimateOnScroll delay={120}>
+        <article class="project-feature reverse">
+          <div class="project-image"><img src="/assets/images/vienna.png" alt="Renovated Viennese townhouse illuminated at dusk" loading="lazy" /></div>
+          <div class="project-info"><p class="project-meta">Vienna · Interior modernisation</p><h3>The Quiet Townhouse</h3><p>Original proportions and ornamental plasterwork frame a precise, restrained interior made for modern family life.</p><a class="text-link light" href="/references">See all work <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </AnimateOnScroll>
+    </div>
+  </section>
 
-    <section class="py-16">
-        <h2 class="text-3xl font-bold mb-10 text-center">Voices of <span class="text-white">Our Clients</span></h2>
-        
-        <div class="flex overflow-x-auto snap-x snap-mandatory space-x-6 pb-4">
-            <AnimateOnScroll animation="zoom-in" delay={100}>
-                <blockquote class="snap-center flex-shrink-0 w-[90vw] md:w-[700px] max-w-4xl mx-auto italic text-center p-8 bg-primary-dark rounded-xl shadow-lg">
-                    <span class="text-accent-gold text-5xl font-serif leading-none mr-2">"</span>
-                    <p class="text-xl font-light leading-snug inline-block text-gray-200">
-                        CE Reinessance took our historic Budapest apartment and achieved the impossible: preserving its 19th-century soul while making it a modern masterpiece. The craftsmanship is truly exceptional.
-                    </p>
-                    <span class="text-accent-gold text-5xl font-serif leading-none ml-2">"</span>
-                    <footer class="mt-4">
-                        <cite class="text-accent-gold text-md font-semibold block not-italic">— Dr. and Mrs. Kovács, Investor Clients in Budapest</cite>
-                    </footer>
-                </blockquote>
-            </AnimateOnScroll>
-
-            <AnimateOnScroll animation="zoom-in" delay={300}>
-                <blockquote class="snap-center flex-shrink-0 w-[90vw] md:w-[700px] max-w-4xl mx-auto italic text-center p-8 bg-primary-dark rounded-xl shadow-lg">
-                    <span class="text-accent-gold text-5xl font-serif leading-none mr-2">"</span>
-                    <p class="text-xl font-light leading-snug inline-block text-gray-200">
-                        Their respect for the Viennese architectural heritage combined with their modern project management made our extensive villa renovation completely stress-free. Highly recommended.
-                    </p>
-                    <span class="text-accent-gold text-5xl font-serif leading-none ml-2">"</span>
-                    <footer class="mt-4">
-                        <cite class="text-accent-gold text-md font-semibold block not-italic">— Herr Anton Mayer, Private Client in Vienna</cite>
-                    </footer>
-                </blockquote>
-            </AnimateOnScroll>
-
-            <AnimateOnScroll animation="zoom-in" delay={500}>
-                <blockquote class="snap-center flex-shrink-0 w-[90vw] md:w-[700px] max-w-4xl mx-auto italic text-center p-8 bg-primary-dark rounded-xl shadow-lg">
-                    <span class="text-accent-gold text-5xl font-serif leading-none mr-2">"</span>
-                    <p class="text-xl font-light leading-snug inline-block text-gray-200">
-                        From initial concept to final handover, the process transparency was exemplary. They handled all permitting for our Prague Old Town apartment flawlessly. A true 'renaissance' team.
-                    </p>
-                    <span class="text-accent-gold text-5xl font-serif leading-none ml-2">"</span>
-                    <footer class="mt-4">
-                        <cite class="text-accent-gold text-md font-semibold block not-italic">— Mrs. Lenka Novak, Commercial Property Owner in Prague</cite>
-                    </footer>
-                </blockquote>
-            </AnimateOnScroll>
-        </div>
-    </section>
-
-    <AnimateOnScroll animation="fade-up">
-        <section class="bg-primary-dark p-10 rounded-lg shadow-2xl text-center">
-            <h2 class="text-4xl font-bold mb-4">See Our Latest Work</h2>
-            <p class="text-lg text-text-light mb-6">View our portfolio of successful projects in Budapest, Vienna, and Prague.</p>
-            <a 
-                href="/references" 
-                class="px-6 py-3 text-base font-semibold text-accent-gold border-2 border-accent-gold rounded-full hover:bg-accent-gold hover:text-background-dark transition duration-500"
-            >
-                View References
-            </a>
-        </section>
+  <section class="section shell">
+    <AnimateOnScroll>
+      <div class="section-heading"><p class="section-kicker">The method</p><h2>Clear from first look<br />to final key.</h2><p>Complex buildings need a simple process. One point of accountability keeps design, approvals, budget and craft aligned.</p></div>
     </AnimateOnScroll>
+    <div class="process-grid">
+      <div class="process-step"><span>01</span><h3>Discover</h3><p>Property survey, ambition, constraints and a realistic commercial framework.</p></div>
+      <div class="process-step"><span>02</span><h3>Define</h3><p>Design direction, permissions, material language and complete scope.</p></div>
+      <div class="process-step"><span>03</span><h3>Deliver</h3><p>Skilled construction, transparent reporting and exacting site control.</p></div>
+      <div class="process-step"><span>04</span><h3>Handover</h3><p>Detailed review, documentation and attentive post-completion care.</p></div>
+    </div>
+  </section>
+
+  <section class="section shell quote-section">
+    <div><p class="eyebrow">Client perspective</p><p>Budapest, Hungary</p></div>
+    <blockquote>“They understood that the details we loved were not obstacles to modern living—they were the foundation of it.”<p class="quote-byline">Private residential client · Historic apartment</p></blockquote>
+  </section>
+
+  <section class="cta-panel">
+    <div><p class="eyebrow">Your property, reimagined</p><h2>Let’s give an exceptional building its next chapter.</h2></div>
+    <div class="cta-actions"><a class="button button-light" href="/contact">Tell us about your project <span aria-hidden="true">↗</span></a><a class="text-link light" href="mailto:project-inquiry@cereinessance.com">Email the studio</a></div>
+  </section>
 </Layout>
